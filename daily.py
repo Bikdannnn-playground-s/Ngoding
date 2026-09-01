@@ -3,7 +3,7 @@ hitung = 1
 daftar_hasil = []
 
 while hitung <= total_mahasiswa:
-    # Menggunakan .format() agar aman di semua versi Python
+    # Menggunakan .format() agar aman di semua versi Python.
     pesan_input = "Masukkan nilai Mahasiswa ke-{}: ".format(hitung)
     nilai = float(input(pesan_input))
     
