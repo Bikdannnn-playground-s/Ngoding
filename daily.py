@@ -3,7 +3,6 @@ hitung = 1
 daftar_hasil = []
 
 while hitung <= total_mahasiswa:
-    # Menggunakan .format() agar aman di semua versi Python.
     pesan_input = "Masukkan nilai Mahasiswa ke-{}: ".format(hitung)
     nilai = float(input(pesan_input))
     
@@ -26,5 +25,4 @@ while hitung <= total_mahasiswa:
 
 print("\nHASIL KONVERSI NILAI:")
 for data in daftar_hasil:
-    # Menggunakan %s untuk menggabungkan teks dan variabel secara universal
     print("mahasiswa ke %s mendapatkan huruf %s" % (data[0], data[1]))
