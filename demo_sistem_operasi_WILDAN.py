@@ -1,6 +1,7 @@
 # Nama: M. Wildan Humaidi S. Budi
 # NIM : D121241058
 # Teknik Informatika Kelas A
+
 import multiprocessing
 import os
 import time
