@@ -12,7 +12,6 @@ def proses_tugas(task_id, data_input, queue_hasil, os_lock):
     Fungsi yang akan dijalankan oleh setiap Independent Process.
     """
     pid = os.getpid()
-    
     # Mengunci terminal agar output print dari process lain tidak tumpang tindih
     with os_lock:
         # MENGGUNAKAN PRINT BIASA (Variabel dipisah dengan koma)
@@ -60,7 +59,7 @@ if __name__ == "__main__":
         
     waktu_selesai = time.time()
     print("\n=== ALL CHILD PROCESSES FINISHED ===")
-    # Print biasa untuk total waktu
+    # Print biasa untuk total waktu.
     print("Total waktu eksekusi paralel:", round(waktu_selesai - waktu_mulai, 2), "detik\n")
     
     print("=== MENAMPILKAN HASIL DARI IPC QUEUE ===")
