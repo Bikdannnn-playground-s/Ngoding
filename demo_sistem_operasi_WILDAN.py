@@ -65,5 +65,5 @@ if __name__ == "__main__":
     print("=== MENAMPILKAN HASIL DARI IPC QUEUE ===")
     while not queue_hasil.empty():
         data_output = queue_hasil.get()
-        # Print biasa untuk menampilkan hasil dari Queue dictionary
+        # Print biasa untuk menampilkan hasil dari Queue dictionary.
         print("Task", data_output['task_id'], "(PID", data_output['pid'], ") -> Hasil kuadrat:", data_output['hasil'])
