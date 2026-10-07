@@ -59,11 +59,11 @@ if __name__ == "__main__":
         
     waktu_selesai = time.time()
     print("\n=== ALL CHILD PROCESSES FINISHED ===")
-    # Print biasa untuk total waktu.
+    # Print biasa untuk total waktu
     print("Total waktu eksekusi paralel:", round(waktu_selesai - waktu_mulai, 2), "detik\n")
     
     print("=== MENAMPILKAN HASIL DARI IPC QUEUE ===")
     while not queue_hasil.empty():
         data_output = queue_hasil.get()
-        # Print biasa untuk menampilkan hasil dari Queue dictionary.
+        # Print biasa untuk menampilkan hasil dari Queue dictionary
         print("Task", data_output['task_id'], "(PID", data_output['pid'], ") -> Hasil kuadrat:", data_output['hasil'])
