@@ -24,3 +24,16 @@ tabel_hasil = df_filtered.groupby(['DataSeries', 'Jenis Kelamin'])['Rata_rata_5_
 tabel_hasil.columns = ['Kelompok Umur', 'Jenis Kelamin', 'Rata-rata Populasi (2020-2024)']
 
 print(tabel_hasil)
+
+# 7. VISUALIZATION: Membuat grafik batang dan menyimpannya sebagai gambar
+import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots(figsize=(8, 6))
+tabel_pivot = tabel_hasil.pivot(index='Kelompok Umur', columns='Jenis Kelamin', values='Rata-rata Populasi (2020-2024)')
+tabel_pivot.plot(kind='bar', ax=ax)
+plt.title('Rata-rata Populasi (2020-2024)')
+plt.ylabel('Rata-rata Populasi')
+plt.xticks(rotation=0)
+plt.tight_layout()
+plt.savefig('output.png')
+print("\nGambar berhasil disimpan sebagai output.png")
