@@ -1,7 +1,7 @@
 total_mahasiswa = 30
 hitung = 1
 daftar_hasil = []
-#tes apakah terdeteksi yang baru.
+#tes apakah terdeteksi yang baru
 while hitung <= total_mahasiswa:
     pesan_input = "Masukkan nilai Mahasiswa ke-{}: ".format(hitung)
     nilai = float(input(pesan_input))
